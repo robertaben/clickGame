@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="Game.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+    <title>Click Game</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <div class="btn btn-sm btn-info" id="showPopup">Information</div>
+            <div id="popup">
+                <div>
+                    <h6>1 Kiosk = +1$.</h6>
+                    <h6>1 Supermarket = +5$ + 1$ autocash every 1s. Supermarket can be purchased when Kiosk quanity is
+                        more or equal to 10</h6>
+                    <h6>1 Bank = +10$ + 5$ autocash every 1s. Bank can be purchased when Supermarket quantity is more or
+                        equeal to 10</h6>
+                </div>
+                <div class="btn btn-sm btn-info" id="closePopup">Ok, close</div>
+            </div>
+            <div id="overlay"></div>
+            <h4 class="amount"> + Amount on next click: <span id="nextAmount">$x</span></h4>
+            <div class="cash" id="cash">$100</div>
+        </div>
+
+        <div class="allProperties">
+            <div class="property">
+                <h4>Kiosk</h4>
+                <h4>Quantity: <span id="kioskAmount">0</span></h4>
+                <h4>Price: <span id="kioskPrice">$10</span></h4>
+                <button id="buyKiosk">Buy</button>
+            </div>
+
+            <div class="property">
+                <h4>Supermarket</h4>
+                <h4>Quantity: <span id="supermarketAmount">0</span></h4>
+                <h4>Price: <span id="supermarketPrice">$300</span></h4>
+                <button id="buySupermarket">Buy</button>
+            </div>
+
+            <div class="property">
+                <h4>Bank</h4>
+                <h4>Quantity: <span id="bankAmount">0</span></h4>
+                <h4>Price: <span id="bankPrice">$5000</span></h4>
+                <button id="buyBank">Buy</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
